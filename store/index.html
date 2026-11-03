@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The Biosuite Stack</title>
+<meta name="description" content="Every system in the healthiest home ever built, and how to get it." />
+<style>
+  :root {
+    --gold:#B8972A; --gold-soft:#C9A64A; --gold-light:#E8C766;
+    --dark:#080808; --charcoal:#1F1F1F; --grey:#5A5A5A;
+    --rule:#E8E3D8; --offwhite:#F0EDE6; --paper:#FCFBF7;
+    --font:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--offwhite); color:var(--dark); font-family:var(--font); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; }
+  .wrap { max-width:660px; margin:0 auto; padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px)); padding-block:48px 72px; }
+  .brand { display:flex; align-items:center; gap:10px; margin-bottom:40px; text-decoration:none; }
+  .brand-mark { width:26px; height:26px; }
+  .brand-name { font-size:13px; font-weight:700; letter-spacing:4px; text-transform:uppercase; }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+  h1 { font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-0.025em; line-height:1.04; margin:0; text-wrap:balance; }
+  .hairline { border:none; border-top:2px solid var(--gold); width:44px; margin:26px 0 24px; }
+  .lede { color:var(--grey); margin:0; max-width:52ch; font-size:16px; }
+  .primary { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:32px; padding:17px 26px; border-radius:999px; background:var(--dark); color:var(--paper); text-decoration:none; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
+  .primary:hover { background:var(--charcoal); }
+  .primary .arrow { font-size:17px; letter-spacing:0; }
+  .sys { margin-top:50px; }
+  .sys > h2 { font-size:11px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin:0 0 4px; padding-bottom:13px; border-bottom:1px solid var(--rule); }
+  .row { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; padding:22px 0; border-bottom:1px solid var(--rule); }
+  .bn { font-size:21px; font-weight:700; letter-spacing:-0.02em; flex:1 1 auto; min-width:0; }
+  .bn a { text-decoration:none; border-bottom:2px solid var(--gold); }
+  .bn a:hover { color:var(--gold); }
+  .chip { flex:0 0 auto; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--grey); border:1px solid var(--rule); background:var(--paper); padding:5px 10px; border-radius:3px; white-space:nowrap; }
+  .does { flex:1 1 100%; color:var(--grey); font-size:14px; min-width:0; margin-top:2px; }
+  .does a { color:var(--dark); text-decoration:none; border-bottom:1px solid var(--rule); }
+  .does a:hover { border-bottom-color:var(--gold); }
+  .buy { flex:1 1 100%; display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:16px; }
+  .copy { font-family:var(--font); font-size:13px; font-weight:700; letter-spacing:2px; background:var(--paper); color:var(--gold); border:1px dashed var(--gold); border-radius:3px; padding:0 15px; min-height:44px; cursor:pointer; }
+  .copy:hover { background:#FAF5E6; }
+  .shop { display:inline-flex; align-items:center; min-height:44px; padding:0 22px; border-radius:999px; background:var(--gold); color:var(--dark); text-decoration:none; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
+  .shop:hover { background:var(--gold-light); }
+  .terms { flex:1 1 100%; color:#8A857A; font-size:13px; min-width:0; }
+  .copy:focus-visible,.shop:focus-visible,.primary:focus-visible,.bn a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+  .ask { margin-top:56px; padding:32px 28px; background:var(--paper); border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:6px; }
+  .ask h2 { font-size:22px; font-weight:700; letter-spacing:-0.02em; margin:0 0 12px; text-wrap:balance; }
+  .ask p { margin:0; color:var(--grey); font-size:14px; max-width:48ch; }
+  .mail { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:22px; }
+  .addr { font-weight:700; font-size:16px; color:var(--gold); user-select:all; word-break:break-all; min-width:0; }
+  .foot { margin-top:52px; padding-top:26px; border-top:1px solid var(--rule); color:#8A857A; font-size:12px; }
+  .foot p { margin:0 0 10px; }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="brand" href="https://biosuiteusa.com">
+    <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <rect x="12" y="12" width="76" height="76" rx="16" fill="#B8972A"/>
+      <rect x="30" y="30" width="40" height="40" rx="6" fill="#F0EDE6"/>
+      <rect x="44" y="44" width="12" height="12" rx="2" fill="#B8972A"/>
+    </svg>
+    <span class="brand-name">Biosuite</span>
+  </a>
+
+  <div class="eyebrow">&#64;biosuite.usa</div>
+  <h1>The Biosuite Stack</h1>
+  <hr class="hairline" />
+  <p class="lede">Every system in the healthiest home ever built, and how to get it. Unit 1 delivers to San Diego County this December.</p>
+
+  <a class="primary" href="https://biosuiteusa.com"><span>See the unit</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
+
+  <section class="sys">
+    <h2>Light</h2>
+    <div class="row">
+      <div class="bn"><a href="https://www.raoptics.com/Biosuite">Ra Optics</a></div>
+      <span class="chip">In the build</span>
+      <div class="does">Circadian lighting and blue-blocking eyewear. Lumios Sky and Glow run every socket in the unit.</div>
+      <div class="buy">
+        <a class="shop" href="https://www.raoptics.com/Biosuite">Shop Ra Optics</a>
+        <span class="terms">Discount applies automatically through this link. No code needed.</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="bn">ARRC LED</div>
+      <span class="chip">In the build</span>
+      <div class="does">The Elysium bed. Red and near-infrared photobiomodulation, built in the USA.</div>
+    </div>
+  </section>
+
+  <section class="sys">
+    <h2>Heat and cold</h2>
+    <div class="row">
+      <div class="bn"><a href="https://www.dialed-labs.com/collections/infrared-saunas">Dialed Labs</a></div>
+      <span class="chip">In the build</span>
+      <div class="does">Barrel sauna on the deck, Pro Pod cold plunge beside it. <a href="https://www.dialed-labs.com/collections/cold-plunge-tubs">See the plunges</a>.</div>
+      <div class="buy">
+        <button class="copy" type="button" data-code="BIOSUITE10">BIOSUITE10</button>
+        <a class="shop" href="https://www.dialed-labs.com/collections/infrared-saunas">Shop Dialed</a>
+        <span class="terms">Copy the code, then paste it at checkout. 10% off and free US shipping.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys">
+    <h2>Water</h2>
+    <div class="row"><div class="bn">Ophora Water</div><span class="chip">In the build</span><div class="does">Whole-home filtration and hyper-oxygenated water. The Estate system feeds every tap.</div></div>
+    <div class="row"><div class="bn">Echo Hydrogen</div><span class="chip">In the build</span><div class="does">Point-of-use molecular hydrogen at the kitchen.</div></div>
+    <div class="row"><div class="bn">O3 Waterworks</div><span class="chip">In the build</span><div class="does">Aqueous ozone inline on the laundry supply. The washer runs cold with no detergent.</div></div>
+  </section>
+
+  <section class="sys">
+    <h2>Recovery</h2>
+    <div class="row"><div class="bn">Therabody</div><span class="chip">In the build</span><div class="does">Percussion and pneumatic compression.</div></div>
+    <div class="row"><div class="bn">Pulse PEMF</div><span class="chip">In the build</span><div class="does">Pulsed electromagnetic field therapy. The XL Pro sits in the training zone.</div></div>
+    <div class="row"><div class="bn">NanoVi</div><span class="chip">In the build</span><div class="does">Bio-identical signalling that targets oxidative stress and protein repair.</div></div>
+    <div class="row"><div class="bn">Rapid Release</div><span class="chip">In the build</span><div class="does">High-frequency targeted vibration for scar tissue and fascia.</div></div>
+  </section>
+
+  <section class="sys">
+    <h2>Training</h2>
+    <div class="row"><div class="bn">OxeFit</div><span class="chip">In the build</span><div class="does">The XS1. Digital strength, force plates and a full rack in a four-foot footprint.</div></div>
+    <div class="row">
+      <div class="bn"><a href="https://clevo-climbing.com/?ref=Biosuite">CLEVO Climbing</a></div>
+      <div class="does">Beech and powder-coated steel hang boards and wall modules. Grip strength in zero floor space, which is the whole trick in 400 square feet.</div>
+      <div class="buy">
+        <button class="copy" type="button" data-code="Biosuite10">Biosuite10</button>
+        <a class="shop" href="https://clevo-climbing.com/?ref=Biosuite">Shop CLEVO</a>
+        <span class="terms">10% off through the link or the code.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sys">
+    <h2>Foundation</h2>
+    <div class="row"><div class="bn">Earthing Co</div><span class="chip">In the build</span><div class="does">Grounded flooring and bedding, tied to earth through the chassis.</div></div>
+    <div class="row"><div class="bn">United Tiny Homes</div><span class="chip">Builder</span><div class="does">Our manufacturing partner. Pro Clima airtight envelope, blower-door tested under 1.0 ACH50.</div></div>
+  </section>
+
+  <section class="ask">
+    <h2>Not everything here has a buy button</h2>
+    <p>The wearables, the PEMF, the hydrogen and the strength equipment are sold through me rather than a storefront. Tell me what you are after and I will get you to the right person at partner pricing.</p>
+    <div class="mail">
+      <span class="addr">ryder@hpcla.com</span>
+      <button class="copy" type="button" data-code="ryder@hpcla.com">Copy email</button>
+    </div>
+  </section>
+
+  <div class="foot">
+    <p>Some links and codes on this page earn Biosuite a commission. It never changes what you pay, and nothing is listed here that is not in the build.</p>
+    <p>Biosuite&trade; by Human Performance Centers LLC &middot; <a href="https://biosuiteusa.com">biosuiteusa.com</a> &middot; 760.695.2876</p>
+    <p>For general wellness only. Not medical advice, and not intended to diagnose, treat, cure, or prevent any disease.</p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function(btn){
+  var original = btn.textContent;
+  btn.addEventListener("click", function(){
+    var code = btn.getAttribute("data-code");
+    function done(){ btn.textContent = "Copied"; setTimeout(function(){ btn.textContent = original; }, 1600); }
+    function sel(){ try { var r=document.createRange(); r.selectNodeContents(btn); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch(e){} btn.textContent = original; }
+    try { navigator.clipboard.writeText(code).then(done).catch(sel); } catch(e) { sel(); }
+  });
+});
+</script>
+</body>
+</html>
