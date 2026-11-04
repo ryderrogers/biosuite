@@ -221,6 +221,20 @@
   .inquiry-main .inquiry-form { margin-left:0; }
   .reserve-solo { max-width:600px; margin:40px auto 0; }
   .reserve-alt { text-align:center; margin:30px auto 0; font-size:14px; color:var(--grey); }
+  section.faq { padding:80px 0; background:var(--paper); }
+  .faq-list { max-width:820px; margin:44px auto 0; border-top:1px solid var(--rule); }
+  .faq-list details { border-bottom:1px solid var(--rule); }
+  .faq-list summary { list-style:none; cursor:pointer; padding:24px 44px 24px 0; position:relative; font-size:18px; font-weight:600; color:var(--dark); line-height:1.4; }
+  .faq-list summary::-webkit-details-marker { display:none; }
+  .faq-list summary::after { content:""; position:absolute; right:8px; top:50%; width:11px; height:11px; margin-top:-7px; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); transform:rotate(45deg); transition:transform 0.22s; }
+  .faq-list details[open] summary::after { transform:rotate(-135deg); margin-top:-3px; }
+  .faq-list summary:hover { color:var(--gold); }
+  .faq-answer { padding:0 44px 26px 0; color:var(--charcoal); font-size:15.5px; line-height:1.7; }
+  .faq-answer p { margin:0 0 12px; }
+  .faq-answer p:last-child { margin-bottom:0; }
+  .faq-foot { max-width:820px; margin:34px auto 0; text-align:center; font-size:14px; color:var(--grey); }
+  .faq-foot a { color:var(--charcoal); border-bottom:1px solid var(--gold); text-decoration:none; font-weight:600; }
+  .faq-foot a:hover { color:var(--gold); text-decoration:none; }
   .reserve-alt a { color:var(--charcoal); border-bottom:1px solid var(--gold); text-decoration:none; font-weight:600; }
   .reserve-alt a:hover { color:var(--gold); text-decoration:none; }
   .founder-photo { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 20%; border-radius:10px; display:block; }
@@ -275,6 +289,24 @@
   .reserve-legal { margin-top:44px; padding-top:26px; border-top:1px solid var(--rule); max-width:78ch; }
   .reserve-legal p { font-size:12px; line-height:1.7; color:#8A857A; margin:0 0 12px; }
 </style>
+
+<!-- ===== ANALYTICS =====
+     Paste your Google Analytics Measurement ID below (looks like G-XXXXXXXXXX).
+     Until it is filled in, nothing loads and nothing breaks. -->
+<script>window.BIOSUITE_GA_ID = "";</script>
+<script>
+(function(){
+  var id = window.BIOSUITE_GA_ID;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  if (!id) return;
+  var g = document.createElement('script');
+  g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+  document.head.appendChild(g);
+  gtag('js', new Date());
+  gtag('config', id);
+})();
+</script>
 </head>
 <body>
 
@@ -640,6 +672,91 @@
   </div>
 </section>
 
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="eyebrow">Questions</div>
+    <h2>The things people ask first.</h2>
+    <hr class="hairline" />
+
+    <div class="faq-list">
+
+      <details>
+        <summary>Where can I legally put one?</summary>
+        <div class="faq-answer">
+          <p>In San Diego County, a September 2025 Director&rsquo;s Determination allows certified tiny homes on wheels to be permitted as dwellings on single-family-zoned lots by right, through a ministerial permit. That is the cleanest path in the country right now and it is why Unit 1 is going to Fallbrook.</p>
+          <p>In Los Angeles County, the unit is permittable as an ADU, but the San Diego single-family-lot path does not carry over. Most other markets fall somewhere between the two. Tell us your parcel on the call and we will tell you honestly what your county allows before you spend anything.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I rent it out?</summary>
+        <div class="faq-answer">
+          <p>Monthly, yes. Nightly, usually not. California Government Code &sect;65852.2 sets a 30-day minimum rental term for ADUs, so short-term rental is not available under the permitted ADU path in California. Thirty-day-and-up stays are fine.</p>
+          <p>Rules differ by state and by jurisdiction. If rental income is the reason you are buying, raise it early and we will pressure-test it with you rather than let you find out later.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What do I need on my property before it arrives?</summary>
+        <div class="faq-answer">
+          <p>A level pad with access for a single delivery load, plus power, water, and sewer or septic at the site. Our water systems need a 3/4 inch main line. Utility hookups require their own permits and a local contractor, which is normal site work and separate from the unit itself.</p>
+          <p>We walk your site with you before you commit, so nothing about the groundwork is a surprise.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does it cost?</summary>
+        <div class="faq-answer">
+          <p>It depends almost entirely on which technology you put inside it. The shell, the envelope, and the health systems that make it a Biosuite are consistent across configurations. Whether you add the sauna, the cold plunge, the red light bed, the hyperbaric chamber, or all of them is what moves the number, and that is a conversation, not a price tag.</p>
+          <p>You get a complete written quote on your configuration call, before any money changes hands beyond a refundable reservation.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I finance it?</summary>
+        <div class="faq-answer">
+          <p>We are not a lender and we do not originate or broker financing, so we will not promise you a program that does not exist. Buyers generally use cash, a HELOC on the primary property, or a renovation or construction loan.</p>
+          <p>Bring us your lender and we will produce whatever specification, valuation, and permitting documentation they ask for.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Who stands behind the technology inside?</summary>
+        <div class="faq-answer">
+          <p>Each manufacturer warranties its own equipment directly, the same as it would if you bought it for your house. We select the equipment, we integrate it, and we coordinate the claim if something goes wrong, so you are not chasing five companies yourself.</p>
+          <p>Nothing goes into a Biosuite that has not been run hard in a real facility first.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long does it take?</summary>
+        <div class="faq-answer">
+          <p>The build cycle itself is 45 to 60 days. What sits around it is your county&rsquo;s permitting timeline, your site work, and the queue ahead of you, which is why the first production run is small and why reservations are taken in the order received.</p>
+          <p>We give you a real estimate rather than an optimistic one, and we keep you current as it moves.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I move it later?</summary>
+        <div class="faq-answer">
+          <p>Yes. It is built on a chassis and travels as a single load, which is the structural reason it exists in this form. If you relocate it to a different jurisdiction, it has to be permitted again at the new site under that jurisdiction&rsquo;s rules.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What if permitting falls through on my end?</summary>
+        <div class="faq-answer">
+          <p>Your reservation comes back in full. It is refundable on request, at any time, for any reason, before you sign a build agreement. You are never stuck holding a deposit on a home your county will not let you place.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <p class="faq-foot">Something not answered here? <a href="#inquiry">Ask Ryder directly</a> or call 760.695.2876.</p>
+  </div>
+</section>
+
 <section id="inquiry" class="inquiry">
   <div class="container">
    <div class="inquiry-grid">
@@ -749,6 +866,41 @@
   })();
 </script>
 <script>
+  // ---- Conversion event tracking ----
+  (function(){
+    function track(name, params){ if (window.gtag) gtag('event', name, params || {}); }
+    document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a){
+      a.addEventListener('click', function(){
+        track('begin_checkout', { currency:'USD', value:1000, items:[{item_name:'Biosuite Reservation'}], location: a.closest('section') ? (a.closest('section').id || a.closest('section').className) : 'unknown' });
+      });
+    });
+    document.querySelectorAll('a[href="#reserve"]').forEach(function(a){
+      a.addEventListener('click', function(){ track('reserve_cta_click', { label: (a.textContent||'').trim() }); });
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+      a.addEventListener('click', function(){ track('phone_click', {}); });
+    });
+    document.querySelectorAll('a[href^="/store/"], a[href="/store/"]').forEach(function(a){
+      a.addEventListener('click', function(){ track('store_click', {}); });
+    });
+    document.querySelectorAll('.faq-list details').forEach(function(d){
+      d.addEventListener('toggle', function(){
+        if (d.open) track('faq_open', { question: (d.querySelector('summary').textContent||'').trim() });
+      });
+    });
+    var f = document.querySelector('.inquiry-form');
+    if (f) f.addEventListener('submit', function(){ track('generate_lead', { form:'inquiry' }); });
+    var seen = {};
+    if ('IntersectionObserver' in window) {
+      ['reserve','faq','inquiry'].forEach(function(secId){
+        var el = document.getElementById(secId); if (!el) return;
+        new IntersectionObserver(function(e, o){
+          if (e[0].isIntersecting && !seen[secId]) { seen[secId] = 1; track('section_view', { section: secId }); o.disconnect(); }
+        }, { threshold: 0.25 }).observe(el);
+      });
+    }
+  })();
+
   document.querySelectorAll('[data-interest]').forEach(function(a){
     a.addEventListener('click',function(){ var sel=document.getElementById('interest'); if(sel) sel.value=a.getAttribute('data-interest'); });
   });
@@ -766,7 +918,7 @@
     var budget   = document.getElementById('budget').value;
     var message  = document.getElementById('message').value.trim();
     var subject  = 'Biosuite Inquiry — ' + name;
-    var body     = 'Biosuite inquiry via hpcla.com/biosuite\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + (phone||'Not provided') + '\nInterest: ' + interest + '\nConfiguration: ' + (budget||'Not provided') + '\n\n---\n' + (message||'(No message)');
+    var body     = 'Biosuite inquiry via biosuiteusa.com\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + (phone||'Not provided') + '\nInterest: ' + interest + '\nConfiguration: ' + (budget||'Not provided') + '\n\n---\n' + (message||'(No message)');
     var done = function(ok) {
       form.style.display = 'none';
       var box = document.getElementById('inquirySuccess');
