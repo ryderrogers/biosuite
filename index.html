@@ -213,19 +213,28 @@
   section.inquiry h2 { color:var(--paper); }
   section.inquiry .inquiry-main > p { color:#BEBAAF; }
   section.inquiry .eyebrow { color:var(--gold-soft); }
-  .inquiry-grid { display:grid; grid-template-columns:1fr 1.05fr; gap:72px; align-items:start; }
+  .inquiry-grid { display:block; }
+  .founder { display:grid; grid-template-columns:300px 1fr; gap:48px; align-items:start; padding-bottom:56px; margin-bottom:56px; border-bottom:1px solid #2A2A2A; }
+  .founder-bio { min-width:0; }
+  .founder-head { margin-top:0 !important; }
+  .inquiry-main { max-width:640px; }
+  .inquiry-main .inquiry-form { margin-left:0; }
+  .reserve-solo { max-width:600px; margin:40px auto 0; }
+  .reserve-alt { text-align:center; margin:30px auto 0; font-size:14px; color:var(--grey); }
+  .reserve-alt a { color:var(--charcoal); border-bottom:1px solid var(--gold); text-decoration:none; font-weight:600; }
+  .reserve-alt a:hover { color:var(--gold); text-decoration:none; }
   .founder-photo { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 20%; border-radius:10px; display:block; }
   .founder-head { display:flex; align-items:center; gap:16px; margin:28px 0 16px; }
   .founder-avatar { width:56px; height:56px; border-radius:50%; object-fit:cover; border:1px solid var(--gold); }
   .founder-name { font-size:24px; font-weight:700; color:var(--paper); line-height:1.1; }
   .founder-role { font-size:11px; letter-spacing:3px; color:var(--gold-soft); text-transform:uppercase; font-weight:700; margin-top:4px; }
   section.inquiry .founder p { color:#BEBAAF; font-size:15px; line-height:1.65; }
-  .founder-stats { display:grid; grid-template-columns:1fr 1fr; gap:20px 24px; margin:24px 0 20px; padding-top:20px; border-top:1px solid #333; }
+  .founder-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:20px 24px; margin:24px 0 20px; padding-top:20px; border-top:1px solid #333; }
   .fs-label-top { grid-column:1/-1; font-size:11px; letter-spacing:3px; color:var(--gold-soft); text-transform:uppercase; font-weight:700; }
   .fs-value { font-size:28px; font-weight:300; color:var(--gold-light); line-height:1; margin-bottom:6px; }
   .fs-desc { font-size:12px; color:#8f8a7e; line-height:1.4; }
   section.inquiry .founder p.founder-proof { font-style:italic; color:#D4D0C4; margin-top:8px; }
-  @media(max-width:900px) { .inquiry-grid { grid-template-columns:1fr; gap:56px; } .inquiry-main { order:-1; } }
+  @media(max-width:900px) { .founder { grid-template-columns:1fr; gap:28px; } .founder-photo { max-width:300px; } .founder-stats { grid-template-columns:1fr 1fr; } }
   .inquiry-form { max-width:560px; margin-top:48px; }
   .inquiry-form label { display:block; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--gold-soft); text-transform:uppercase; margin-bottom:8px; }
   .inquiry-form input, .inquiry-form select, .inquiry-form textarea { width:100%; font-family:var(--font); font-size:16px; padding:14px 0; background:transparent; border:none; border-bottom:1px solid #444; color:var(--paper); margin-bottom:24px; outline:none; transition:border-color 0.2s; }
@@ -592,21 +601,8 @@
     <div class="eyebrow">Reservations</div>
     <h2>The first production run.</h2>
     <hr class="hairline" />
-    <p>Unit 1 is in construction now and delivers to San Diego County this December. Production is limited by a single builder and a 45 to 60 day build cycle, so the first run is small. There are two ways in.</p>
-    <div class="tier-cards">
-
-      <div class="tier-card">
-        <div class="tier-label">No commitment</div>
-        <div class="tier-name">Join the list</div>
-        <div class="tier-price">Free</div>
-        <p class="tier-desc">Follow the build and get first notice when slots open. The fastest way to stay close without deciding anything.</p>
-        <ul class="tier-features">
-          <li>Build updates from Unit 1 as it comes together</li>
-          <li>First look at new configurations and finishes</li>
-          <li>Early notice before reservations open to the public</li>
-        </ul>
-        <a class="reserve-btn" href="#inquiry">Join the list</a>
-      </div>
+    <p>Unit 1 is in construction now and delivers to San Diego County this December. Production is limited by a single builder and a 45 to 60 day build cycle, so the first run is small.</p>
+    <div class="tier-cards reserve-solo">
 
       <div class="tier-card featured">
         <div class="tier-label">Hold your place</div>
@@ -623,6 +619,7 @@
       </div>
 
     </div>
+    <p class="reserve-alt">Not ready to reserve? <a href="#inquiry">Book a no-cost call with Ryder</a> and talk it through first.</p>
 
     <div class="reserve-terms">
       <h3>What a reservation is, in plain terms.</h3>
@@ -648,6 +645,7 @@
    <div class="inquiry-grid">
     <div class="founder">
       <img class="founder-photo" src="founder-portrait.jpg" alt="Ryder Rogers, founder of Human Performance Centers" loading="lazy" />
+      <div class="founder-bio">
       <div class="founder-head">
         <div><div class="founder-name">Ryder Rogers</div><div class="founder-role">Founder &middot; Human Performance Centers</div></div>
       </div>
@@ -660,6 +658,7 @@
         <div><div class="fs-value">8.1&deg;</div><div class="fs-desc">Cellular phase angle</div></div>
       </div>
       <p class="founder-proof">Every protocol was tested on one body before it was built into a home.</p>
+      </div>
     </div>
     <div class="inquiry-main">
     <div class="eyebrow">Get In Touch</div>
