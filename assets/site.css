@@ -199,6 +199,12 @@ section { padding:var(--space) 0; }
 @media (min-width:900px) { .pgrid { grid-template-columns:repeat(4,1fr); gap:12px; } }
 .pgrid img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; }
 
+/* Two renderings shown whole, side by side at equal height */
+.pair { display:flex; flex-direction:column; gap:8px; }
+.pair figure { margin:0; }
+.pair img { width:100%; height:auto; border-radius:4px; }
+@media (min-width:760px) { .pair { flex-direction:row; gap:12px; } .pair figure { flex-basis:0; flex-shrink:1; min-width:0; } }
+
 /* Spec list */
 .specs { display:grid; border-top:1px solid var(--rule); }
 @media (min-width:760px) { .specs { grid-template-columns:1fr 1fr; column-gap:48px; } }
