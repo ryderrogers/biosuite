@@ -91,7 +91,7 @@ window.BIOSUITE_GA_ID = "";
         form.style.display = 'none';
         box.innerHTML = ok
           ? 'Thank you. I’ll reply within two business days. — Ryder'
-          : 'Your mail app should have opened. If not, write directly to <a href="mailto:ryder@hpcla.com">ryder@hpcla.com</a>.';
+          : 'Your mail app should have opened. If not, write directly to <a href="mailto:ryder@biosuiteusa.com">ryder@biosuiteusa.com</a>.';
         box.hidden = false;
         box.focus();
       };
@@ -109,7 +109,7 @@ window.BIOSUITE_GA_ID = "";
           });
       };
       send(1).then(function () { done(true); }).catch(function () {
-        location.href = 'mailto:ryder@hpcla.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        location.href = 'mailto:ryder@biosuiteusa.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         setTimeout(function () { done(false); }, 600);
       });
     });
