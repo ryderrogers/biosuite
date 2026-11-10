@@ -6,15 +6,23 @@
 <script>
 (function(){var m={"#technology":"/technology/","#architecture":"/home/","#structure":"/home/","#tiers":"/home/#configurations","#opportunity":"/ownership/","#reserve":"/reserve/","#faq":"/reserve/#faq","#inquiry":"/about/#contact"};var t=m[location.hash];if(t)location.replace(t);})();
 </script>
+<link rel="preload" as="image" type="image/webp" href="/img/hero-sunset-1670.webp" imagesrcset="/img/hero-sunset-900.webp 900w, /img/hero-sunset-1670.webp 1670w" imagesizes="100vw" fetchpriority="high">
 <title>Biosuite — A wellness home on wheels</title>
 <meta name="description" content="A relocatable 350+ sq ft home fitted with sauna, cold plunge, light, and water systems. Reservations open: $1,000, fully refundable until you sign a build agreement.">
 <meta property="og:title" content="Biosuite — A wellness home on wheels">
 <meta property="og:description" content="A relocatable 350+ sq ft home fitted with sauna, cold plunge, light, and water systems. Reservations open: $1,000, fully refundable until you sign a build agreement.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://biosuiteusa.com/">
-<meta property="og:image" content="https://biosuiteusa.com/biosuite-hero.jpg">
+<meta property="og:site_name" content="Biosuite">
+<meta property="og:image" content="https://biosuiteusa.com/img/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rendering of a Biosuite home at dusk with a barrel sauna and plunge tub on the deck">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="twitter:title" content="Biosuite — A wellness home on wheels">
+<meta name="twitter:description" content="A relocatable 350+ sq ft home fitted with sauna, cold plunge, light, and water systems. Reservations open: $1,000, fully refundable until you sign a build agreement.">
+<meta name="twitter:image" content="https://biosuiteusa.com/img/og-share.jpg">
+
 <link rel="canonical" href="https://biosuiteusa.com/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' rx='12' fill='%23B8972A'/%3E%3Crect x='34' y='34' width='32' height='32' rx='4' fill='%23FCFBF7'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="/assets/site.css">
@@ -39,14 +47,21 @@
 </header>
 <main id="main">
 <section class="hero-full">
-  <img src="/img/hero-deck-2560.jpg" alt="Rendering of a dark-clad Biosuite home at dusk with a barrel sauna, plunge tub, deck, and rooftop deck" width="2560" height="1440" srcset="/img/hero-deck-800.jpg 800w, /img/hero-deck-1400.jpg 1400w, /img/hero-deck-2000.jpg 2000w, /img/hero-deck-2560.jpg 2560w" sizes="100vw" fetchpriority="high" decoding="async" class="hero-bg">
-  <div class="hero-shade" aria-hidden="true"></div>
-  <div class="wrap hero-copy">
-    <div class="eyebrow">By Human Performance Centers</div>
-    <h1>A home built around heat, cold, light, and water.</h1>
-    <p class="sub">A relocatable home of 350+ sq ft, fitted with the wellness equipment you choose. Designed in Los Angeles. Home built in the USA. Technology sourced globally.</p>
-    <div class="cta"><a class="btn btn-gold" href="/reserve/">Reserve &mdash; $1,000 refundable</a><a class="link" href="/technology/">See the technology</a></div>
-    <p class="status">Unit 1 is in production, built to the ANSI A119.5 standard, third-party certification in progress, targeted for delivery to San Diego County this winter.</p>
+  <div class="hero-stage">
+    <div class="hero-media">
+      <img class="hero-bg" src="/img/hero-sunset-1670.webp" srcset="/img/hero-sunset-900.webp 900w, /img/hero-sunset-1670.webp 1670w" sizes="100vw" width="1670" height="942" fetchpriority="high" decoding="async" alt="Rendering of a dark-clad Biosuite home at sunset with a barrel sauna, cold plunge, soak tub, fire pit, and rooftop deck">
+      <p class="hero-cap hero-cap-m">Rendering. Shown with optional deck, furnishings and equipment. Final home may differ.</p>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-copy">
+      <div class="eyebrow">By Human Performance Centers</div>
+      <h1>A home built around heat, cold, light, and water.</h1>
+      <p class="sub">A relocatable home of 350+ sq ft, fitted with the wellness equipment you choose. Designed in Los Angeles. Home built in the USA. Technology sourced globally.</p>
+      <div class="cta"><a class="btn btn-gold" href="/reserve/">Reserve &mdash; $1,000 refundable</a><a class="link" href="/technology/">See the technology</a></div>
+    </div>
+  </div>
+  <div class="hero-bar">
+    <div class="wrap"><p class="status">Unit 1 is in production, built to the ANSI A119.5 standard, third-party certification in progress, targeted for delivery to San Diego County this winter.</p><p class="hero-cap hero-cap-d">Rendering. Shown with optional deck, furnishings and equipment. Final home may differ.</p></div>
   </div>
 </section>
 
@@ -68,12 +83,12 @@
     </div>
     <div class="cards four">
       <article class="card">
-      <span class="ph" style="--lqip:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAANABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDvZY5MFNyxxrsTrgjFaE8oNrIPMjz5Z43c9KqRzMPDLovAPzN3z2qm8rGFgf7p/lXHy9EdvP1LG5JLiVHLYkjZSD04Gc0VFe8aaZSSWdgcdhxiirhFvVMipJJ2aP/2Q==);--pos:center"><img src="/img/sauna-crop.jpg" alt="Two people seated in a wood-lined barrel sauna" width="922" height="505" loading="lazy" decoding="async" style="object-position:center"></span>
+      <span class="ph" style="--lqip:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDImBsrdbWFVKKh80+rY5q7cOv2OUZz8h6/Ss8RQvoj3Ls/2g/3W4x70SXsht3AkOChG3Ax0ri5Wd/MhbpTdxyW7KNqpvjbuGHb8qKgmJhja6QEYJCknghhzx60VpBSS90yqcreplW/+qn/AOuR/mKRpHMZG9unrRRWj3M1sOvf9afov8hRRRVR2In8TP/Z);--pos:center 30%"><img src="/flag-sauna.jpg" alt="Two people seated in a wood-lined barrel sauna" width="922" height="688" srcset="/img/flag-sauna-600.jpg 600w, /flag-sauna.jpg 922w" sizes="(min-width:1000px) 300px, (min-width:600px) 50vw, 100vw" loading="lazy" decoding="async" style="object-position:center 30%"></span>
       <div class="cat">Heat</div>
       <h3>Barrel sauna</h3>
       <p>Dialed Labs barrel sauna on the deck. Spruce-hemlock interior, Harvia stone heater, app control.</p>
     </article><article class="card">
-      <span class="ph" style="--lqip:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlbxIbp5W+RWTAHHL1RNjJHIFKcEZBxUu2SEhopgzH1GP5083+oEfeJ99oNZxT7mkmuxWu4GjcDZtBUUVP+/ueZ2bcvAyO1FVdrQVr6lRHYPgMQPrVuQAQlgBnHWiigEVoOYy3f1ooooYI/9k=);--pos:center"><img src="/img/plunge-deck.jpg" alt="Rendering of a plunge tub on the deck beside the barrel sauna" width="640" height="480" loading="lazy" decoding="async" style="object-position:center"></span>
+      <span class="ph" style="--lqip:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAAPABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCLXNf1CPVLq3E7COOUqoBK4H4YqvbeK72FvmkkcehlOP1zWzrfhe5v9QleBIEimbc0rMS44546VkS+CNQjB2Twy49cgmgZqab4turvULa38tAsrhW3cnH4YoqtoXhu8g1CC5nMaLDJkqDknFFAj//Z);--pos:center"><img src="/flag-plunge-dialed.jpg" alt="Black Dialed Labs cold plunge tub with a wooden lid and step" width="576" height="360" loading="lazy" decoding="async" style="object-position:center;object-fit:contain;background:#fff"></span>
       <div class="cat">Cold</div>
       <h3>Cold plunge</h3>
       <p>Dialed Labs self-contained plunge. No plumbing hookup; chills water to 37&deg;F, with built-in filtration.</p>
@@ -106,7 +121,7 @@
       </div>
       <div class="finish hearth">
         <span class="ph" style="--lqip:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxLYwIpaO4icAZ27gTUNhNDHPICGPy5yozVaC7RwTGA204/GodQt7ldRt5jGY2GS+TgYIxnHtmsPie1jb4Vvc2JbiEsnlZkDH5geMD/PaiofDJW4hS1lIcZO7B4OAKK0jS5ldGVStyO1j/2Q==);--pos:center"><img src="/finish-hearth.jpg" alt="Hearth finish: pale pine living space, bedroom, and cedar bath" width="566" height="381" loading="lazy" decoding="async"></span>
-        <div class="finish-body"><div class="cat">Warm cabin</div><div class="finish-name">Hearth</div><p>Pale pine and cedar, big windows, natural textiles.</p></div>
+        <div class="finish-body"><div class="cat">Warm cabin</div><div class="finish-name">Hearth</div><p>Pale pine and cedar, big windows, natural textiles.</p><p class="cap">Example interior from our builder. Biosuite finishes may differ.</p></div>
       </div>
     </div>
     <div class="cta"><a class="link" href="/home/">See the home</a></div>
