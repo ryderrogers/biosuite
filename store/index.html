@@ -14,7 +14,7 @@
     color-scheme: light;
   }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--offwhite); color:var(--dark); font-family:var(--font); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body { margin:0; background:var(--offwhite); color:var(--dark); font-family:var(--font); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   a { color:inherit; }
   .wrap { max-width:660px; margin:0 auto; padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px)); padding-block:48px 72px; }
   .brand { display:flex; align-items:center; gap:10px; margin-bottom:40px; text-decoration:none; }
@@ -23,7 +23,7 @@
   .eyebrow { font-size:11px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
   h1 { font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-0.025em; line-height:1.04; margin:0; text-wrap:balance; }
   .hairline { border:none; border-top:2px solid var(--gold); width:44px; margin:26px 0 24px; }
-  .lede { color:var(--grey); margin:0; max-width:52ch; font-size:16px; }
+  .lede { color:var(--grey); margin:0; max-width:52ch; font-size:17px; }
   .primary { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:32px; padding:17px 26px; border-radius:999px; background:var(--dark); color:var(--paper); text-decoration:none; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
   .primary:hover { background:var(--charcoal); }
   .primary .arrow { font-size:17px; letter-spacing:0; }
@@ -34,7 +34,7 @@
   .bn a { text-decoration:none; border-bottom:2px solid var(--gold); }
   .bn a:hover { color:var(--gold); }
   .chip { flex:0 0 auto; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--grey); border:1px solid var(--rule); background:var(--paper); padding:5px 10px; border-radius:3px; white-space:nowrap; }
-  .does { flex:1 1 100%; color:var(--grey); font-size:14px; min-width:0; margin-top:2px; }
+  .does { flex:1 1 100%; color:var(--grey); font-size:15px; min-width:0; margin-top:2px; }
   .does a { color:var(--dark); text-decoration:none; border-bottom:1px solid var(--rule); }
   .does a:hover { border-bottom-color:var(--gold); }
   .buy { flex:1 1 100%; display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:16px; }
@@ -42,15 +42,15 @@
   .copy:hover { background:#FAF5E6; }
   .shop { display:inline-flex; align-items:center; min-height:44px; padding:0 22px; border-radius:999px; background:var(--gold); color:var(--dark); text-decoration:none; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
   .shop:hover { background:var(--gold-light); }
-  .terms { flex:1 1 100%; color:#8A857A; font-size:13px; min-width:0; }
+  .terms { flex:1 1 100%; color:#6E6A60; font-size:14px; min-width:0; }
   .copy:focus-visible,.shop:focus-visible,.primary:focus-visible,.bn a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
   .ask { margin-top:56px; padding:32px 28px; background:var(--paper); border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:6px; }
   .ask h2 { font-size:22px; font-weight:700; letter-spacing:-0.02em; margin:0 0 12px; text-wrap:balance; }
-  .ask p { margin:0; color:var(--grey); font-size:14px; max-width:48ch; }
+  .ask p { margin:0; color:var(--grey); font-size:16px; max-width:48ch; }
   .mail { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:22px; }
   .addr { font-weight:700; font-size:16px; color:var(--gold); user-select:all; word-break:break-all; min-width:0; }
   a.addr { text-decoration:none; }
-  .foot { margin-top:52px; padding-top:26px; border-top:1px solid var(--rule); color:#8A857A; font-size:12px; }
+  .foot { margin-top:52px; padding-top:26px; border-top:1px solid var(--rule); color:#6E6A60; font-size:14px; }
   .foot p { margin:0 0 10px; }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
 </style>
@@ -104,11 +104,11 @@
         <span class="terms">Copy the code, then paste it at checkout. 10% off and free US shipping.</span>
       </div>
     </div>
+    <div class="row"><div class="bn">Ophora</div><span class="chip">In the build</span><div class="does">Chlorine-free soak tub on the deck, kept clean with stabilized oxygen, ozone, and UV.</div></div>
   </section>
 
   <section class="sys">
     <h2>Water</h2>
-    <div class="row"><div class="bn">Ophora Water</div><span class="chip">In the build</span><div class="does">Whole-home filtration and hyper-oxygenated water. The Estate system feeds every tap.</div></div>
     <div class="row"><div class="bn">Echo Hydrogen</div><span class="chip">In the build</span><div class="does">Point-of-use molecular hydrogen at the kitchen.</div></div>
     <div class="row"><div class="bn">O3 Waterworks</div><span class="chip">In the build</span><div class="does">Aqueous ozone inline on the laundry supply. The washer runs cold with no detergent.</div></div>
   </section>

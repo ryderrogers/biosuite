@@ -16,6 +16,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' rx='12' fill='%23B8972A'/%3E%3Crect x='34' y='34' width='32' height='32' rx='4' fill='%23FCFBF7'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
+<noscript><style>.ph > img { opacity:1 }</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,9 +38,20 @@
 <section class="page-hero">
   <div class="wrap">
     <div class="eyebrow">Reservations</div>
-    <h1>Reserve your place in line.</h1>
-    <p class="sub">$1,000. Fully refundable until you sign a build agreement.</p>
-    <div class="cta"><a class="link" href="#reserve-now">Go to reservation</a></div>
+    <div class="reserve-top">
+      <div>
+        <h1>Reserve your place in line.</h1>
+        <p class="sub">$1,000. Fully refundable until you sign a build agreement.</p>
+      </div>
+      <div id="reserve-now" class="reserve-box">
+        <div class="amt">$1,000</div>
+        <p class="amt-d">Fully refundable until you sign a build agreement.</p>
+        <label class="agree" for="agree"><input type="checkbox" id="agree"><span>I've read the <a href="/reservation-terms/">Reservation Terms</a></span></label>
+        <a id="stripe-btn" class="btn btn-gold is-disabled" role="link" aria-disabled="true" aria-describedby="agree-hint" data-href="https://buy.stripe.com/00wfZg4NZ6rufY83RHcIE00">Reserve for $1,000</a>
+        <p class="hint" id="agree-hint" aria-live="polite">Check the box above to continue.</p>
+        <noscript><p class="hint">This button needs JavaScript. To reserve without it, email ryder@hpcla.com.</p></noscript>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -74,20 +86,12 @@
 
 <section>
   <div class="wrap">
-    <div class="lists">
+    <div>
       <div class="fine">
         <h2>The fine print</h2>
         <p>Reservations are accepted by Human Performance Centers LLC. A reservation is a refundable deposit, not a purchase agreement or construction contract. It sells no home, fixes no price, conveys no interest in any unit or real property, and obligates neither of us to proceed.</p>
         <p>Price, specifications, and schedule are set only in a signed build agreement; if you sign one, your $1,000 is credited toward the purchase price. Delivery dates are estimates that depend on certification, permitting, site readiness, and queue position.</p>
         <p>Permits are the owner's responsibility and are decided by your local jurisdiction. <a href="/reservation-terms/" style="color:var(--gold-ink)">Full Reservation Terms</a></p>
-      </div>
-      <div id="reserve-now" class="reserve-box">
-        <div class="amt">$1,000</div>
-        <p class="amt-d">Fully refundable until you sign a build agreement.</p>
-        <label class="agree" for="agree"><input type="checkbox" id="agree"><span>I've read the <a href="/reservation-terms/">Reservation Terms</a></span></label>
-        <a id="stripe-btn" class="btn btn-gold is-disabled" role="link" aria-disabled="true" aria-describedby="agree-hint" data-href="https://buy.stripe.com/00wfZg4NZ6rufY83RHcIE00">Reserve for $1,000</a>
-        <p class="hint" id="agree-hint" aria-live="polite">Check the box above to continue.</p>
-        <noscript><p class="hint">This button needs JavaScript. To reserve without it, email ryder@hpcla.com.</p></noscript>
       </div>
     </div>
   </div>

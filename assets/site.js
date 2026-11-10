@@ -20,6 +20,12 @@ window.BIOSUITE_GA_ID = "";
 (function () {
   function track(name, params) { if (window.BIOSUITE_GA_ID && window.gtag) gtag('event', name, params || {}); }
 
+  /* Lazy images: fade in over the blurred placeholder once loaded */
+  document.querySelectorAll('.ph > img').forEach(function (im) {
+    var on = function () { im.parentNode.classList.add('loaded'); };
+    if (im.complete && im.naturalWidth) on(); else { im.addEventListener('load', on); im.addEventListener('error', on); }
+  });
+
   /* Mobile menu */
   var btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
   if (btn && menu) {
