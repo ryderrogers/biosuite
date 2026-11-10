@@ -92,8 +92,8 @@ section { padding:var(--space) 0; }
 /* Home hero */
 .hero-full { position:relative; padding:0; background:var(--dark); color:var(--paper); }
 .hero-stage { position:relative; }
-.hero-media { position:relative; background:#6b422d; }
-.hero-bg { width:100%; aspect-ratio:1670/942; object-fit:cover; background:#6b422d; }
+.hero-media { position:relative; background:#694433; }
+.hero-bg { width:100%; aspect-ratio:1671/941; object-fit:cover; background:#694433; }
 .hero-shade { display:none; }
 .hero-cap { font-size:13px; line-height:1.45; color:#B9B4A8; margin:0; }
 .hero-cap-m { background:var(--dark); padding:8px var(--gutter) 0; }
