@@ -99,7 +99,8 @@ section { padding:var(--space) 0; }
 .hero-cap-m { background:var(--dark); padding:8px var(--gutter) 0; }
 .hero-cap-d { display:none; }
 .hero-copy { position:relative; padding-top:24px; padding-bottom:4px; }
-.hero-full h1 { font-size:clamp(36px, 4.1vw, 58px); max-width:14ch; color:var(--paper); }
+.hero-full h1 { font-size:clamp(44px, 5vw, 72px); max-width:11ch; color:var(--paper); }
+.goal { font-size:clamp(20px, 1.9vw, 26px); font-weight:600; letter-spacing:-0.01em; color:var(--gold-light); margin-bottom:10px; }
 .hero-full .eyebrow { color:var(--gold-soft); }
 .hero-full .sub { color:#E4DFD3; margin-top:16px; }
 .hero-full .link { color:var(--paper); }
