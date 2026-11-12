@@ -15,7 +15,7 @@
 
 *,*::before,*::after { box-sizing:border-box; }
 * { margin:0; padding:0; }
-html { -webkit-text-size-adjust:100%; scroll-padding-top:88px; }
+html { -webkit-text-size-adjust:100%; scroll-padding-top:96px; }
 @media (prefers-reduced-motion:no-preference) { html { scroll-behavior:smooth; } }
 body { font-family:var(--font); background:var(--offwhite); color:var(--dark); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
 img { display:block; max-width:100%; height:auto; }
@@ -58,10 +58,12 @@ h3 { font-size:clamp(20px, 2vw, 24px); letter-spacing:-0.015em; line-height:1.2;
 
 /* Header */
 .site-header { position:sticky; top:0; z-index:100; background:rgba(240,237,230,.94); -webkit-backdrop-filter:saturate(180%) blur(16px); backdrop-filter:saturate(180%) blur(16px); border-bottom:1px solid var(--rule); }
-.hdr { display:flex; align-items:center; gap:16px; height:64px; }
+.hdr { display:flex; align-items:center; gap:16px; height:76px; }
 .brand { display:flex; align-items:center; gap:10px; text-decoration:none; margin-right:auto; }
-.brand svg { width:26px; height:26px; flex:0 0 auto; }
-.brand span { font-size:13px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--dark); }
+/* Logo: 180px = brand-standard minimum for the logo with the word; header height leaves ½H clear space above and below */
+.brand img { display:block; width:180px; height:auto; flex:0 0 auto; }
+/* Under 360px there is no room for the 180px minimum: brand ladder says use the mark (min 90px) */
+@media (max-width:359px) { .brand img { width:96px; } }
 .nav { display:none; gap:28px; }
 .nav a { font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; text-decoration:none; color:var(--grey); padding:8px 0; border-bottom:1px solid transparent; }
 .nav a:hover { color:var(--dark); }
@@ -77,8 +79,10 @@ h3 { font-size:clamp(20px, 2vw, 24px); letter-spacing:-0.015em; line-height:1.2;
 .menu a:not(.btn) { font-size:20px; font-weight:600; text-decoration:none; padding:14px 0; border-bottom:1px solid var(--rule); }
 .menu a[aria-current="page"] { color:var(--gold-ink); }
 .menu .btn { margin-top:24px; }
-@media (min-width:720px) { .phone-label { display:inline; } .nav-reserve { display:inline-flex; } .phone { border:0; padding:8px 0; } .menu .btn { display:none; } }
-@media (min-width:1120px) { .nav { display:flex; } .menu-btn, .menu { display:none !important; } .hdr { gap:32px; height:72px; } }
+@media (max-width:399px) { .hdr { gap:10px; } .phone { font-size:12px; padding:8px 11px; } }
+@media (min-width:880px) { .phone-label { display:inline; } }
+@media (min-width:720px) { .nav-reserve { display:inline-flex; } .phone { border:0; padding:8px 0; } .menu .btn { display:none; } }
+@media (min-width:1240px) { .nav { display:flex; } .menu-btn, .menu { display:none !important; } .hdr { gap:32px; height:80px; } }
 
 /* Sections */
 section { padding:var(--space) 0; }
@@ -321,7 +325,8 @@ section { padding:var(--space) 0; }
 .site-footer { background:var(--dark); color:var(--on-dark-dim); padding:56px 0 36px; font-size:14px; border-top:1px solid var(--dark-rule); }
 .foot-top { display:grid; gap:32px; padding-bottom:32px; border-bottom:1px solid var(--dark-rule); }
 @media (min-width:860px) { .foot-top { grid-template-columns:1fr auto; align-items:start; } }
-.foot-brand { font-size:13px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--gold); }
+.foot-brand { display:inline-block; padding:4px 0 8px; }
+.foot-brand img { display:block; width:200px; height:auto; }
 .foot-nav { display:flex; flex-wrap:wrap; gap:8px 24px; }
 .site-footer .foot-nav a { color:var(--paper); text-decoration:none; font-size:14px; }
 .site-footer .foot-nav a:hover { color:var(--gold-light); }
