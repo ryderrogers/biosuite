@@ -334,3 +334,6 @@ section { padding:var(--space) 0; }
 .site-footer a { color:var(--gold-soft); }
 .foot-legal { padding-top:24px; }
 .copyright { color:var(--paper); }
+
+.check.two-col { max-width:900px; }
+@media (min-width:760px) { .check.two-col { columns:2; column-gap:48px; } .check.two-col li { break-inside:avoid; } }
