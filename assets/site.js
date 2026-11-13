@@ -59,7 +59,7 @@ window.BIOSUITE_GA_ID = "";
     agree.addEventListener('change', function () { sync(); if (agree.checked) track('terms_checked', {}); });
     pay.addEventListener('click', function (e) {
       if (!agree.checked) { e.preventDefault(); agree.focus(); return; }
-      track('begin_checkout', { currency: 'USD', value: 1000, items: [{ item_name: 'Biosuite Reservation' }] });
+      track('begin_checkout', { currency: 'USD', value: 10000, items: [{ item_name: 'Biosuite Reservation' }] });
     });
     sync();
   }
