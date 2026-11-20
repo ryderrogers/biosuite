@@ -295,6 +295,10 @@ section { padding:var(--space) 0; }
 /* Contact + form */
 .contact { display:grid; gap:48px; }
 @media (min-width:900px) { .contact { grid-template-columns:1fr 1.2fr; gap:80px; } }
+/* Early access: intro, then form, then call/text on phones; form in its own column on desktop */
+.contact.ea { grid-template-areas:"intro" "form" "direct"; }
+.ea-intro { grid-area:intro; } .ea-form { grid-area:form; } .ea-direct { grid-area:direct; }
+@media (min-width:900px) { .contact.ea { grid-template-areas:"intro form" "direct form"; grid-template-rows:auto 1fr; row-gap:40px; align-items:start; } }
 .direct-num { display:inline-block; margin-top:12px; font-size:clamp(28px, 3.4vw, 40px); font-weight:700; text-decoration:none; color:var(--paper); }
 .direct-num:hover { color:var(--gold-light); }
 .direct-actions { display:flex; gap:10px; margin-top:16px; }
