@@ -337,5 +337,12 @@ section { padding:var(--space) 0; }
 .foot-legal { padding-top:24px; }
 .copyright { color:var(--paper); }
 
+/* Trademark symbol: small superscript that does not change line height */
+.tm { font-size:.55em; font-weight:inherit; line-height:0; position:relative; top:-.65em; vertical-align:baseline; margin-left:.04em; }
+.tm-logo { font-size:11px; line-height:1; top:0; align-self:flex-start; margin-left:-8px; color:var(--dark); }
+@media (max-width:359px) { .brand .tm-logo { display:none; } }
+.foot-brand { display:inline-flex; align-items:flex-start; text-decoration:none; }
+.foot-brand .tm-logo { margin-left:2px; color:var(--paper); }
+
 .check.two-col { max-width:900px; }
 @media (min-width:760px) { .check.two-col { columns:2; column-gap:48px; } .check.two-col li { break-inside:avoid; } }
