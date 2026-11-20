@@ -39,34 +39,9 @@ window.BIOSUITE_GA_ID = "";
     });
   }
 
-  /* Reservation: Stripe link only works after the terms box is checked */
-  var agree = document.getElementById('agree'), pay = document.getElementById('stripe-btn'), hint = document.getElementById('agree-hint');
-  if (agree && pay) {
-    var url = pay.getAttribute('data-href');
-    var sync = function () {
-      if (agree.checked) {
-        pay.setAttribute('href', url);
-        pay.removeAttribute('aria-disabled');
-        pay.classList.remove('is-disabled');
-        if (hint) hint.textContent = 'You’ll finish on Stripe’s secure checkout.';
-      } else {
-        pay.removeAttribute('href');
-        pay.setAttribute('aria-disabled', 'true');
-        pay.classList.add('is-disabled');
-        if (hint) hint.textContent = 'Check the box above to continue.';
-      }
-    };
-    agree.addEventListener('change', function () { sync(); if (agree.checked) track('terms_checked', {}); });
-    pay.addEventListener('click', function (e) {
-      if (!agree.checked) { e.preventDefault(); agree.focus(); return; }
-      track('begin_checkout', { currency: 'USD', value: 10000, items: [{ item_name: 'Biosuite Reservation' }] });
-    });
-    sync();
-  }
-
   /* Conversion events (no-ops while analytics is off) */
-  document.querySelectorAll('a[href="/reserve/"]').forEach(function (a) {
-    a.addEventListener('click', function () { track('reserve_cta_click', { label: (a.textContent || '').trim(), page: location.pathname }); });
+  document.querySelectorAll('a[href="/early-access/"]').forEach(function (a) {
+    a.addEventListener('click', function () { track('early_access_cta_click', { label: (a.textContent || '').trim(), page: location.pathname }); });
   });
   document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.addEventListener('click', function () { track('phone_click', {}); }); });
   document.querySelectorAll('a[href^="/store/"]').forEach(function (a) { a.addEventListener('click', function () { track('store_click', {}); }); });
@@ -80,23 +55,25 @@ window.BIOSUITE_GA_ID = "";
     var FORMSPREE_URL = 'https://formspree.io/f/xyklyadv';
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      track('generate_lead', { form: 'inquiry' });
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var isEA = location.pathname.indexOf('/early-access') === 0;
+      track('generate_lead', { form: isEA ? 'early_access' : 'inquiry' });
       var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-      var name = v('name'), email = v('email'), phone = v('phone'), interest = v('interest'), budget = v('budget'), message = v('message');
-      var subject = 'Biosuite Inquiry — ' + name;
-      var body = 'Biosuite inquiry via biosuiteusa.com\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nInterest: ' + interest + '\nConfiguration: ' + (budget || 'Not provided') + '\n\n---\n' + (message || '(No message)');
+      var name = v('name'), email = v('email'), phone = v('phone'), zip = v('zip'), interest = v('interest'), timeline = v('timeline'), budget = v('budget'), message = v('message');
+      var subject = (isEA ? 'Biosuite Early Access — ' : 'Biosuite Inquiry — ') + name;
+      var body = 'Biosuite inquiry via biosuiteusa.com\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nZIP: ' + (zip || 'Not provided') + '\nInterest: ' + interest + '\nTimeline: ' + (timeline || 'Not provided') + '\nConfiguration: ' + (budget || 'Not provided') + '\n\n---\n' + (message || '(No message)');
       var submit = form.querySelector('button[type="submit"]');
       var box = document.getElementById('inquirySuccess');
       var done = function (ok) {
         form.style.display = 'none';
         box.innerHTML = ok
-          ? 'Thank you. I’ll reply within two business days. — Ryder'
+          ? (isEA ? 'Thank you. You’re on the early-access list. I’ll be in touch within two business days. — Ryder' : 'Thank you. I’ll reply within two business days. — Ryder')
           : 'Your mail app should have opened. If not, write directly to <a href="mailto:ryder@biosuiteusa.com">ryder@biosuiteusa.com</a>.';
         box.hidden = false;
         box.focus();
       };
       submit.disabled = true; submit.textContent = 'Sending…';
-      var payload = JSON.stringify({ _subject: subject, _replyto: email, form_type: 'Biosuite inquiry', name: name, email: email, phone: phone || 'Not provided', interest: interest, configuration: budget || 'Not provided', message: message || '(No message)', page: location.href });
+      var payload = JSON.stringify({ _subject: subject, _replyto: email, form_type: isEA ? 'Biosuite early access' : 'Biosuite inquiry', name: name, email: email, phone: phone || 'Not provided', zip: zip || 'Not provided', interest: interest, timeline: timeline || 'Not provided', configuration: budget || 'Not provided', message: message || '(No message)', page: location.href });
       var send = function (attempt) {
         var ctl = ('AbortController' in window) ? new AbortController() : null;
         var timer = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;

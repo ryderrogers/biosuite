@@ -35,13 +35,13 @@
     <a class="brand" href="/" aria-label="Biosuite home"><picture><source media="(max-width:359px)" srcset="/img/brand/biosuite-mark-two-tone-for-light.svg" width="96" height="21"><img src="/img/brand/biosuite-logo-two-tone-for-light.svg" width="180" height="40" alt=""></picture><sup class="tm tm-logo">™</sup></a>
     <nav class="nav" aria-label="Main"><a href="/technology/">Technology</a><a href="/home/">The Home</a><a href="/ownership/">Ownership</a><a href="/about/" aria-current="page">About</a></nav>
     <a class="phone" href="tel:+17606952876" aria-label="Call or text 760.695.2876"><span class="phone-label">Call or text</span>760.695.2876</a>
-    <a class="btn btn-gold nav-reserve" href="/reserve/">Reserve</a>
+    <a class="btn btn-gold nav-reserve" href="/early-access/">Get early access</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
   </div>
   <nav id="menu" class="menu" aria-label="Mobile" hidden>
-    <div class="wrap"><a href="/technology/">Technology</a><a href="/home/">The Home</a><a href="/ownership/">Ownership</a><a href="/about/" aria-current="page">About</a><a class="btn btn-gold" href="/reserve/">Reserve</a></div>
+    <div class="wrap"><a href="/technology/">Technology</a><a href="/home/">The Home</a><a href="/ownership/">Ownership</a><a href="/about/" aria-current="page">About</a><a class="btn btn-gold" href="/early-access/">Get early access</a></div>
   </nav>
 </header>
 <main id="main">
@@ -109,6 +109,8 @@
         <input type="email" id="email" name="email" autocomplete="email" required>
         <label for="phone">Phone (optional)</label>
         <input type="tel" id="phone" name="phone" autocomplete="tel">
+        <label for="zip">ZIP code where the home would go</label>
+        <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit US ZIP code" required>
         <label for="interest">I&rsquo;m interested in a Biosuite home as</label>
         <select id="interest" name="interest" required>
           <option value="">Select one&hellip;</option>
@@ -117,15 +119,24 @@
           <option>Deploy it: multiple units or hospitality</option>
           <option>Just exploring</option>
         </select>
+        <label for="timeline">When are you looking?</label>
+        <select id="timeline" name="timeline" required>
+          <option value="">Select one&hellip;</option>
+          <option>Within 3 months</option>
+          <option>3&ndash;6 months</option>
+          <option>6&ndash;12 months</option>
+          <option>12+ months</option>
+          <option>Just exploring</option>
+        </select>
         <label for="budget">Configuration of interest</label>
         <select id="budget" name="budget">
           <option value="">Not sure yet</option>
           <option>Core</option><option>Signature</option><option>Estate</option><option>Larger / modular</option>
         </select>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Location, timeline, questions"></textarea>
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="Questions, site details, anything else"></textarea>
         <button class="btn btn-gold" type="submit">Send</button>
-        <p class="form-legal">We use what you send only to reply to you. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        <p class="form-legal">We use what you send to reply to you and to plan where and when we build. We never sell it. See our <a href="/privacy/">Privacy Policy</a>.</p>
       </form>
       <div id="inquirySuccess" class="success" tabindex="-1" role="status" hidden></div>
     </div>
@@ -141,11 +152,11 @@
         <p><a href="mailto:ryder@biosuiteusa.com">ryder@biosuiteusa.com</a> &middot; <a href="tel:+17606952876">760.695.2876</a></p>
       </div>
       <nav class="foot-nav" aria-label="Footer">
-        <a href="/technology/">Technology</a><a href="/home/">The Home</a><a href="/ownership/">Ownership</a><a href="/reserve/">Reserve</a><a href="/about/">About</a><a href="/store/">The Stack</a>
+        <a href="/technology/">Technology</a><a href="/home/">The Home</a><a href="/ownership/">Ownership</a><a href="/early-access/">Early access</a><a href="/about/">About</a><a href="/store/">The Stack</a>
       </nav>
     </div>
     <div class="foot-legal">
-      <p class="copyright">&copy; 2026 Human Performance Centers LLC &middot; <a href="/reservation-terms/">Reservation Terms</a> &middot; <a href="/privacy/">Privacy</a></p>
+      <p class="copyright">&copy; 2026 Human Performance Centers LLC &middot; <a href="/privacy/">Privacy</a></p>
       <p class="copyright">Biosuite<sup class="tm">™</sup> is a trademark of Human Performance Centers LLC.</p>
       <p>For general wellness only. Not medical advice, and not intended to diagnose, treat, cure, or prevent any disease. Consult your physician before using heat, cold, light, or oxygen equipment.</p>
       <p>Nothing on this site is an offer to sell or a solicitation of an offer to buy any security.</p>
